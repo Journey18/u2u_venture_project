@@ -7,7 +7,11 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1320px;
+}
+
+body {
+  background-image: url(../../image/Home-img/background.jpg);
 }
 
 @media screen and (max-width: 576px) {

@@ -1,7 +1,7 @@
 header {
-  background-color: $color_white_1;
+  background-color: transparent;
   padding: $py_header 0;
-  box-shadow: #2b72dc5f 0px 2px 8px 0px;
+  box-shadow: $green 0px 2px 8px 0px;
 
   .header_content {
     display: flex;
@@ -10,8 +10,11 @@ header {
 
     .logo {
       a {
-        @include styleText($fs_5, $color_blue_1, $fw_bold);
+        // @include styleText($fs_5, $color_blue_1, $fw_bold);
         text-decoration: none;
+      }
+      img {
+        width: 160px;
       }
     }
 
@@ -27,14 +30,19 @@ header {
         li {
           margin: 0 10px;
           position: relative;
-
+          padding: 10px 20px;
+          border-radius: 40px;
+          transition: all 0.5s;
+          &:hover {
+            background-color: #1d1d1d;
+          }
           // parent selector
           // parent selector(&) đại diện cho lớp cha đang nằm ngoài, có thể sử dụng để đại diện cho lớp cha và trỏ tới các thuộc tính
           &::before {
             content: "";
             width: 0;
             height: 3px;
-            background-color: red;
+            background-color: $green;
             position: absolute;
             left: 0;
             bottom: -10px;
@@ -46,24 +54,34 @@ header {
           }
 
           &.active {
+            background-color: #1d1d1d;
+            a {
+              color: $green;
+            }
             &::before {
               width: 100%;
-            }
-
-            a {
-              color: $color_blue_1;
             }
           }
 
           a {
-            @include styleText($fs_2, $color_blue_2, $fw_300);
+            @include styleText($fs_4, $light, $fw_300);
             text-decoration: none;
           }
         }
+      }
+    }
+    // right button
+    .btn-login {
+      @include styleText($fs-3, $white, $fw-400);
+      cursor: pointer;
+      background: $gradient;
 
-        // li:before {
-        //   content: "";
-        // }
+      padding: 8px 50px;
+      border-radius: 30px;
+
+      a {
+        color: $white;
+        text-decoration: none;
       }
     }
   }

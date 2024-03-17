@@ -65,7 +65,11 @@
 
 .container {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: 1320px;
+}
+
+body {
+  background-image: url(../../image/Home-img/background.jpg);
 }
 
 @media screen and (max-width: 576px) {
@@ -75,9 +79,9 @@
   }
 }
 header {
-  background-color: #f5f9fd;
-  padding: 30px 0;
-  box-shadow: rgba(43, 114, 220, 0.3725490196) 0px 2px 8px 0px;
+  background-color: transparent;
+  padding: 10px 0;
+  box-shadow: #33cc99 0px 2px 8px 0px;
 }
 header .header_content {
   display: flex;
@@ -85,10 +89,10 @@ header .header_content {
   align-items: center;
 }
 header .header_content .logo a {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2b71dc;
   text-decoration: none;
+}
+header .header_content .logo img {
+  width: 160px;
 }
 @media screen and (max-width: 576px) {
   header .header_content nav {
@@ -102,12 +106,18 @@ header .header_content nav ul {
 header .header_content nav ul li {
   margin: 0 10px;
   position: relative;
+  padding: 10px 20px;
+  border-radius: 40px;
+  transition: all 0.5s;
+}
+header .header_content nav ul li:hover {
+  background-color: #1d1d1d;
 }
 header .header_content nav ul li::before {
   content: "";
   width: 0;
   height: 3px;
-  background-color: red;
+  background-color: #33cc99;
   position: absolute;
   left: 0;
   bottom: -10px;
@@ -116,16 +126,32 @@ header .header_content nav ul li::before {
 header .header_content nav ul li:hover::before {
   width: 100%;
 }
+header .header_content nav ul li.active {
+  background-color: #1d1d1d;
+}
+header .header_content nav ul li.active a {
+  color: #33cc99;
+}
 header .header_content nav ul li.active::before {
   width: 100%;
 }
-header .header_content nav ul li.active a {
-  color: #2b71dc;
-}
 header .header_content nav ul li a {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 300;
-  color: #1e345e;
+  color: #faf9ff;
+  text-decoration: none;
+}
+header .header_content .btn-login {
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  background: linear-gradient(275deg, #14523d 10.08%, #3c9 90.25%);
+  padding: 8px 50px;
+  border-radius: 30px;
+}
+header .header_content .btn-login a {
+  color: #ffffff;
   text-decoration: none;
 }
 
