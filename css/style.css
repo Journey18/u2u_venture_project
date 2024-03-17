@@ -525,6 +525,14 @@ header .header_content .btn-login a {
 .about .content img {
   width: 50%;
 }
+@media screen and (max-width: 576px) {
+  .about .content {
+    display: block;
+  }
+  .about .content img {
+    width: 100%;
+  }
+}
 
 .news {
   font-size: 20px;
