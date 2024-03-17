@@ -82,7 +82,7 @@ html {
 }
 
 body {
-  background-image: url(../../image/Home-img/background.jpg);
+  background-image: url("https://uniultra.xyz/fe-theme/images/background.jpg?v=1.0");
 }
 
 @media screen and (max-width: 576px) {
