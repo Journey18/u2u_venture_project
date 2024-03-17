@@ -1,11 +1,7 @@
 // layout banner
 
 .banner {
-  background-image: url("./../image/product-header-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  padding: $py_section 0;
+  height: 80vh;
 
   .banner_content {
     display: flex;
