@@ -1,0 +1,26 @@
+.about {
+  @include styleText($fs_6, $white, $fw_bold);
+  .title {
+    h2 {
+      text-align: center;
+    }
+  }
+  .content {
+    @include styleText($fs_5, $white, $fw-300);
+
+    // background-color: gray;
+    display: flex;
+    gap: 50px;
+
+    img {
+      width: 50%;
+    }
+    //  responsive
+    @media screen and (max-width: 576px) {
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

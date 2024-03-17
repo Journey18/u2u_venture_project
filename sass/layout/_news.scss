@@ -1,0 +1,50 @@
+.news {
+  @include styleText($fs_4, $white, $fw_300);
+  img {
+    width: 100%;
+  }
+  .title {
+    @include styleText($fs_6, $white, $fw_bold);
+    h2 {
+      text-align: center;
+    }
+  }
+  .content {
+    .item {
+      //   background-color: red;
+      padding: 30px;
+      .content {
+        // background-color: blue;
+        border-radius: 1rem;
+        box-shadow: $green 0px 2px 8px 0px;
+        padding: 20px;
+        overflow: hidden;
+
+        .img-wraper {
+          height: 200px;
+
+          //   background-color: green;
+
+          overflow: hidden;
+          // img {
+          //   width: 100%;
+          // }
+        }
+
+        .text {
+          div {
+            text-align: right;
+            a {
+              color: $white;
+              transition: all 0.5s;
+              &:hover {
+                color: $green;
+              }
+            }
+            font-size: $fs_7;
+          }
+        }
+      }
+    }
+  }
+}
