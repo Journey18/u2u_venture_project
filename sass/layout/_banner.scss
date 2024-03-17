@@ -1,0 +1,63 @@
+// layout banner
+
+.banner {
+  background-image: url("./../image/product-header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  padding: $py_section 0;
+
+  .banner_content {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 576px) {
+      display: block;
+    }
+
+    .content_left {
+      h1 {
+        @include styleText($fs_7, $color_blue_1, $fw_bold);
+
+        @media screen and (max-width: 576px) {
+          font-size: 40px;
+        }
+      }
+
+      .sub_title {
+        @include styleText($fs_4, $color_blue_2, $fw_bold);
+        margin: 10px 0;
+      }
+
+      p {
+        @include styleText($fs_3, $color_blue_2, $fw_400);
+      }
+
+      .group_button {
+        margin-top: 10px;
+
+        button:first-child {
+          @include styleButton(white, $color_blue_1, 10px 25px);
+        }
+
+        button:last-child {
+          @include styleButton($color_blue_1, white, 10px 25px);
+          box-shadow: rgba(255, 255, 255, 0.349) 1.95px 1.95px 2.6px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .content_right {
+      img {
+        height: 500px;
+
+        @media screen and (max-width: 576px) {
+          margin-top: 50px;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

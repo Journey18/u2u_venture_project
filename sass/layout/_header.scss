@@ -1,0 +1,70 @@
+header {
+  background-color: $color_white_1;
+  padding: $py_header 0;
+  box-shadow: #2b72dc5f 0px 2px 8px 0px;
+
+  .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      a {
+        @include styleText($fs_5, $color_blue_1, $fw_bold);
+        text-decoration: none;
+      }
+    }
+
+    nav {
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          margin: 0 10px;
+          position: relative;
+
+          // parent selector
+          // parent selector(&) đại diện cho lớp cha đang nằm ngoài, có thể sử dụng để đại diện cho lớp cha và trỏ tới các thuộc tính
+          &::before {
+            content: "";
+            width: 0;
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: all 0.5s;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+
+          &.active {
+            &::before {
+              width: 100%;
+            }
+
+            a {
+              color: $color_blue_1;
+            }
+          }
+
+          a {
+            @include styleText($fs_2, $color_blue_2, $fw_300);
+            text-decoration: none;
+          }
+        }
+
+        // li:before {
+        //   content: "";
+        // }
+      }
+    }
+  }
+}
