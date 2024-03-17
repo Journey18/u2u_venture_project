@@ -2,7 +2,15 @@
 @import "./helper/mixin";
 @import "./helper/keyframes";
 @import "./helper/ultinity";
+
 @import "./base/custom";
+
+// library
+@import "../assets/scss/slick.scss";
+@import "../assets/scss/slick-theme.scss";
+
 @import "./layout/header";
 @import "./layout/banner";
 @import "./layout/product";
+@import "./layout/about";
+@import "./layout/news";
