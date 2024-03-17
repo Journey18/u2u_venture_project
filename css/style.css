@@ -8,6 +8,14 @@
     transform: scale(1) rotate(0);
   }
 }
+@keyframes faded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .p-0 {
   padding: 0px;
 }
@@ -237,11 +245,11 @@ header .header_content .btn-login a {
 
 .product {
   padding: 50px 0;
-}
-.product .product_title h2 {
   font-size: 30px;
   font-weight: bold;
-  color: #1e345e;
+  color: #ffffff;
+}
+.product .product_title h2 {
   text-align: center;
 }
 .product .product_content {
@@ -256,37 +264,52 @@ header .header_content .btn-login a {
   }
 }
 .product .product_content .product_item {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: #33cc99 0px 2px 8px 0px;
   border-radius: 8px;
-  padding: 30px;
-  animation-name: zoomIn;
-  animation-duration: 2s;
   opacity: 0;
+  padding: 30px;
+  animation-name: faded;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 }
 .product .product_content .product_item:nth-child(2) {
-  animation-delay: 2s;
+  animation-delay: 1s;
 }
 .product .product_content .product_item:nth-child(3) {
-  animation-delay: 4s;
+  animation-delay: 2s;
 }
 .product .product_content .product_item:nth-child(4) {
-  animation-delay: 6s;
+  animation-delay: 3s;
 }
 .product .product_content .product_item:nth-child(5) {
-  animation-delay: 8s;
+  animation-delay: 4s;
 }
 .product .product_content .product_item:nth-child(6) {
-  animation-delay: 10s;
+  animation-delay: 5s;
 }
-.product .product_content .product_item img {
+.product .product_content .product_item .product_avatar {
   width: 100%;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .product_content .product_item .product_avatar .product_img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.product .product_content .product_item .product_avatar .product_img img {
+  width: 100%;
+  height: 100%;
+  box-shadow: #33cc99 0px 2px 8px 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product .product_content .product_item h3 {
   font-size: 24px;
   font-weight: bold;
-  color: #2b71dc;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
@@ -294,7 +317,7 @@ header .header_content .btn-login a {
 .product .product_content .product_item p {
   font-size: 18px;
   font-weight: bold;
-  color: #1e345e;
+  color: #cecece;
   margin-top: 10px;
 }
 .product .product_content .product_item .rate_buy {
@@ -307,14 +330,14 @@ header .header_content .btn-login a {
 }
 .product .product_content .product_item .rate_buy .buy_now {
   border: 2px solid #2b71dc;
-  background-color: #2b71dc;
-  color: white;
+  background-color: #ffffff;
+  color: #ffffff;
   padding: 10px 25px;
   border-radius: 8px;
   transition: all 0.5s;
   cursor: pointer;
 }
 .product .product_content .product_item .rate_buy .buy_now:hover {
-  background-color: white;
-  color: #2b71dc;
+  background-color: #ffffff;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

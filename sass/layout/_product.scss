@@ -1,10 +1,10 @@
 // product
 .product {
   padding: $py_section 0;
+  @include styleText($fs_6, $white, $fw_bold);
 
   .product_title {
     h2 {
-      @include styleText($fs_6, $color_blue_2, $fw_bold);
       text-align: center;
     }
   }
@@ -20,27 +20,42 @@
     }
 
     .product_item {
-      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      box-shadow: $green 0px 2px 8px 0px;
       border-radius: 8px;
-      padding: $p_productItem;
-      animation-name: zoomIn;
-      animation-duration: 2s;
       opacity: 0;
+      padding: $p_productItem;
+
+      animation-name: faded;
+      animation-duration: 2s;
       animation-fill-mode: forwards;
 
       @for $i from 1 through 5 {
         &:nth-child(#{$i + 1}) {
-          animation-delay: ($i * 2s);
+          animation-delay: ($i * 1s);
+        }
+      }
+      .product_avatar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .product_img {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            box-shadow: $green 0px 2px 8px 0px;
+            object-fit: cover;
+          }
         }
       }
 
-      img {
-        width: 100%;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-      }
-
       h3 {
-        @include styleText($fs_5, $color_blue_1, $fw_bold);
+        @include styleText($fs_5, $white, $fw_bold);
         display: flex;
         justify-content: space-between;
         margin-top: 10px;
@@ -48,7 +63,7 @@
 
       p {
         // @extend .sub_title
-        @include styleText($fs_3, $color_blue_2, $fw_bold);
+        @include styleText($fs_3, $text, $fw_bold);
         margin-top: 10px;
       }
 
@@ -64,7 +79,7 @@
         }
 
         .buy_now {
-          @include styleButton($color_blue_1, white, 10px 25px);
+          @include styleButton($white, $white, 10px 25px);
         }
       }
     }
